@@ -27,7 +27,9 @@ const downloadeInstagramRell = async (url: string, ctx: Context) => {
     const response = await axios.request(options);
 
     // respons.data.media - da video linki kelmoqda
-    await ctx.replyWithVideo(response.data.media, { caption: `${response}` });
+    await ctx.replyWithVideo(response.data.media, { caption: `${response.data.title}` });
+    console.log(response.data.media);
+    
   } catch (error) {
     console.error(error);
     await ctx.reply("Videoni yuklab bo'lmadi.");
