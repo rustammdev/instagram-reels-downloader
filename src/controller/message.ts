@@ -41,7 +41,7 @@ const messageController = async (ctx: Context) => {
   const isValid = checkValidUrl(message);
 
   if (isValid) {
-    await ctx.reply(`Video yuklanmoqda...`);
+    await ctx.reply(`Video yuklanmoqda, bu biroz vaqt olishi mumkin.`);
 
     // Bot video yuboryapti degan holatda turadi
     await ctx.replyWithChatAction("upload_video");
